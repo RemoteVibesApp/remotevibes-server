@@ -1,5 +1,8 @@
 const fastify = require('fastify')({ logger: true })
 
+require('dotenv').config();
+
+const PORT = process.env.PORT;
 // Declare a route
 fastify.get('/', function handler (request, reply) {
   reply.send({ hello: 'world' })
