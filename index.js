@@ -9,10 +9,11 @@ fastify.get('/', function handler (request, reply) {
 })
 
 // Run the server!
-fastify.listen({ port: PORT }, (err) => {
+fastify.listen({ port: PORT , hoest: '0.0.0.0'}, (err) => {
     
   if (err) {
     fastify.log.error(err)
+    console.log("jhatkrhe", err)
     process.exit(1)
   }
 })
